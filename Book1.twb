@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20221.22.0415.1144                               -->
+<workbook original-version='18.1' source-build='2022.1.1 (20221.22.0415.1144)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Active And Deaths+ (Covid Dashboard)' inline='true' name='federated.1xg1xqf1haz7hj1aunsfc0k6k69x' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Covid Dashboard' name='excel-direct.1urkzv40r0uugo18197ol0d28jce'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/sonuk/Downloads/archive (9)/Covid Dashboard.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1urkzv40r0uugo18197ol0d28jce' name='Active And Deaths' table='[&apos;Active And Deaths$&apos;]' type='table'>
+          <columns gridOrigin='A1:C38:no:A1:C38:0' header='yes' lost='0' outcome='6' processed='74'>
+            <column datatype='string' name='Row Labels' ordinal='0' />
+            <column datatype='integer' name='Active' ordinal='1' />
+            <column datatype='integer' name='Deaths' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.1urkzv40r0uugo18197ol0d28jce' name='Active And Deaths' table='[&apos;Active And Deaths$&apos;]' type='table'>
+            <columns gridOrigin='A1:C38:no:A1:C38:0' header='yes' lost='0' outcome='6' processed='74'>
+              <column datatype='string' name='Row Labels' ordinal='0' />
+              <column datatype='integer' name='Active' ordinal='1' />
+              <column datatype='integer' name='Deaths' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1urkzv40r0uugo18197ol0d28jce' name='Cases and Recovered' table='[&apos;Cases and Recovered$&apos;]' type='table'>
+            <columns gridOrigin='A3:C40:no:A3:C40:0' header='yes' lost='0' outcome='6' processed='74'>
+              <column datatype='string' name='Row Labels' ordinal='0' />
+              <column datatype='integer' name='Total Cases' ordinal='1' />
+              <column datatype='integer' name='Discharged' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Active]' value='[Active And Deaths].[Active]' />
+          <map key='[Deaths]' value='[Active And Deaths].[Deaths]' />
+          <map key='[Discharged]' value='[Cases and Recovered].[Discharged]' />
+          <map key='[Row Labels (Cases and Recovered)]' value='[Cases and Recovered].[Row Labels]' />
+          <map key='[Row Labels]' value='[Active And Deaths].[Row Labels]' />
+          <map key='[Total Cases]' value='[Cases and Recovered].[Total Cases]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Active And Deaths]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C38:no:A1:C38:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Cases and Recovered]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A3:C40:no:A3:C40:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Row Labels</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Row Labels]</local-name>
+            <parent-name>[Active And Deaths]</parent-name>
+            <remote-alias>Row Labels</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Active</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Active]</local-name>
+            <parent-name>[Active And Deaths]</parent-name>
+            <remote-alias>Active</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Deaths]</local-name>
+            <parent-name>[Active And Deaths]</parent-name>
+            <remote-alias>Deaths</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Row Labels</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Row Labels (Cases and Recovered)]</local-name>
+            <parent-name>[Cases and Recovered]</parent-name>
+            <remote-alias>Row Labels</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cases and Recovered_3B20222114364FB5A0E01F58765BA686]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Cases]</local-name>
+            <parent-name>[Cases and Recovered]</parent-name>
+            <remote-alias>Total Cases</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cases and Recovered_3B20222114364FB5A0E01F58765BA686]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discharged</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Discharged]</local-name>
+            <parent-name>[Cases and Recovered]</parent-name>
+            <remote-alias>Discharged</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cases and Recovered_3B20222114364FB5A0E01F58765BA686]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Active And Deaths' datatype='table' name='[__tableau_internal_object_id__].[Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Cases and Recovered' datatype='table' name='[__tableau_internal_object_id__].[Cases and Recovered_3B20222114364FB5A0E01F58765BA686]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Active And Deaths' id='Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E'>
+            <properties context=''>
+              <relation connection='excel-direct.1urkzv40r0uugo18197ol0d28jce' name='Active And Deaths' table='[&apos;Active And Deaths$&apos;]' type='table'>
+                <columns gridOrigin='A1:C38:no:A1:C38:0' header='yes' lost='0' outcome='6' processed='74'>
+                  <column datatype='string' name='Row Labels' ordinal='0' />
+                  <column datatype='integer' name='Active' ordinal='1' />
+                  <column datatype='integer' name='Deaths' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Cases and Recovered' id='Cases and Recovered_3B20222114364FB5A0E01F58765BA686'>
+            <properties context=''>
+              <relation connection='excel-direct.1urkzv40r0uugo18197ol0d28jce' name='Cases and Recovered' table='[&apos;Cases and Recovered$&apos;]' type='table'>
+                <columns gridOrigin='A3:C40:no:A3:C40:0' header='yes' lost='0' outcome='6' processed='74'>
+                  <column datatype='string' name='Row Labels' ordinal='0' />
+                  <column datatype='integer' name='Total Cases' ordinal='1' />
+                  <column datatype='integer' name='Discharged' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Row Labels]' />
+              <expression op='[Row Labels (Cases and Recovered)]' />
+            </expression>
+            <first-end-point object-id='Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E' />
+            <second-end-point object-id='Cases and Recovered_3B20222114364FB5A0E01F58765BA686' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Active And Deaths+ (Covid Dashboard)' name='federated.1xg1xqf1haz7hj1aunsfc0k6k69x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xg1xqf1haz7hj1aunsfc0k6k69x'>
+            <column datatype='integer' name='[Active]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Deaths]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Discharged]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='Active And Deaths' datatype='integer' name='[__tableau_internal_object_id__].[Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total Cases]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='Cases and Recovered' datatype='integer' name='[__tableau_internal_object_id__].[Cases and Recovered_3B20222114364FB5A0E01F58765BA686]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='Active And Deaths' datatype='table' name='[__tableau_internal_object_id__].[Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='Cases and Recovered' datatype='table' name='[__tableau_internal_object_id__].[Cases and Recovered_3B20222114364FB5A0E01F58765BA686]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Active And Deaths_D3F0A7C213DD404E8C252E2E1FB7BC6E:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Cases and Recovered_3B20222114364FB5A0E01F58765BA686]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Cases and Recovered_3B20222114364FB5A0E01F58765BA686:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Active]' derivation='Sum' name='[sum:Active:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Deaths]' derivation='Sum' name='[sum:Deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Discharged]' derivation='Sum' name='[sum:Discharged:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total Cases]' derivation='Sum' name='[sum:Total Cases:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xg1xqf1haz7hj1aunsfc0k6k69x].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.1xg1xqf1haz7hj1aunsfc0k6k69x].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1xg1xqf1haz7hj1aunsfc0k6k69x].[Multiple Values]</rows>
+        <cols>[federated.1xg1xqf1haz7hj1aunsfc0k6k69x].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{0F5F53CB-F08B-4BC6-8095-EFFB84CB60A8}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xg1xqf1haz7hj1aunsfc0k6k69x].[:Measure Names]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F5C23815-C6F5-40C8-B433-6D3DAB1E4CDE}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
